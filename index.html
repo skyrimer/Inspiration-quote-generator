@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ignite inspiration with Dragon Quotes, the ultimate application for handpicked inspirational quotes. Access wisdom effortlessly and stay motivated, even offline. Join now and unleash your inner fire!"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./favicon/safari-pinned-tab.svg"
+      color="#ff8400"
+    />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#080502" />
+    <meta name="msapplication-config" content="./favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,500;1,400&display=swap"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <!-- Other css -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <title>DragonQuotes</title>
+  </head>
+  <body>
+    <div class="burger-wrapper">
+      <span class="burger">
+        <span class="bar">
+          <span class="visuallyhidden"></span>
+        </span>
+      </span>
+    </div>
+    <nav id="menu">
+      <a href="#about">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+          />
+        </svg>
+        <span>About us</span>
+      </a>
+      <a href="#quote">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+          />
+        </svg>
+
+        <span>Get a quote</span>
+      </a>
+      <a href="#benefits">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525"
+          />
+        </svg>
+        <span>Benefits</span></a
+      >
+      <a href="#authors">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+          />
+        </svg>
+        <span>Authors</span></a
+      >
+      <a href="#technologies">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+          />
+        </svg>
+
+        <span>Technologies</span>
+      </a>
+    </nav>
+    <main>
+      <section class="section-start fullscreen" id="home">
+        <img
+          class="replacement"
+          src="./images/dragon640.jpg"
+          alt="Dragon"
+          srcset="
+            ./images/dragon.jpg     5670w,
+            ./images/dragon2400.jpg 2400w,
+            ./images/dragon1920.jpg 1920w,
+            ./images/dragon640.jpg   640w
+          "
+        />
+        <h1 class="container">
+          <span>Unleash the Dragon</span>
+          <span>inside yourself</span>
+        </h1>
+        <a class="chevron-container" href="#about">
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <span>Scroll down</span>
+        </a>
+      </section>
+      <section class="section-about bg-stars" id="about">
+        <article class="container column-2">
+          <div class="column-text">
+            <h2>Meet Your Catalyst To Prosperity</h2>
+            <p>
+              Welcome to the world of 🐉Dragon Quotes🐉, where we will share
+              ancient wisdom to catapult you towards greatness and success. Are
+              you prepared to let yourself be guided by the mystical wisdom of
+              our awe-inspiring dragon?
+            </p>
+            <p>
+              Dragons symbolize strength, wisdom, and untamed potential. They
+              inspire awe and represent the indomitable spirit within us. As
+              icons of power, they remind us to embrace our inner fire and
+              overcome challenges. Dragons also symbolize transformation, rising
+              from the ashes, and the pursuit of knowledge. They serve as a
+              timeless reminder of our inner strength and the limitless
+              possibilities that await us.
+            </p>
+            <p>
+              Our unique quote generator offers tailored messages of
+              inspiration, lighting the path to your dreams like a beacon in the
+              night. With expert guidance from a legendary creature, you’ll be
+              well-equipped to conquer any challenge.
+            </p>
+            <a href="#quote" class="btn-primary">Generate quote </a>
+          </div>
+          <div class="column-image">
+            <img
+              loading="lazy"
+              src="./images/dragon-about-alternative.jpg"
+              alt="Dragon"
+              data-tilt
+              data-tilt-full-page-listening
+              data-tilt-max="10"
+            />
+          </div>
+        </article>
+      </section>
+      <section class="section-quotes fullscreen" id="quote">
+        <img
+          loading="lazy"
+          src="./images/quote640.jpg"
+          alt="Dragon"
+          srcset="
+            ./images/quote.jpg     5174w,
+            ./images/quote2400.jpg 2400w,
+            ./images/quote1920.jpg 1920w
+          "
+        />
+        <div class="quote-wrapper glassy hidden" data-quote-container>
+          <blockquote>
+            <span class="quote-text" data-quote></span>
+            <cite data-quote-author></cite>
+          </blockquote>
+          <div class="btn-wrapper">
+            <div class="tooltip-wrapper">
+              <button
+                class="glassy"
+                aria-label="Like"
+                aria-describedby="tooltip-like"
+                data-like
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"
+                  />
+                </svg>
+              </button>
+              <span id="tooltip-like" role="tooltip"> Like </span>
+            </div>
+            <div class="tooltip-wrapper">
+              <button
+                class="glassy"
+                aria-label="Share"
+                aria-describedby="tooltip-share"
+                data-share
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M15.75 4.5a3 3 0 11.825 2.066l-8.421 4.679a3.002 3.002 0 010 1.51l8.421 4.679a3 3 0 11-.729 1.31l-8.421-4.678a3 3 0 110-4.132l8.421-4.679a3 3 0 01-.096-.755z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <span id="tooltip-share" role="tooltip"> Share </span>
+            </div>
+            <div class="tooltip-wrapper">
+              <button
+                class="glassy"
+                aria-label="Save"
+                aria-describedby="tooltip-save"
+                data-save
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <span id="tooltip-save" role="tooltip"> Save </span>
+            </div>
+            <div class="tooltip-wrapper">
+              <button
+                class="glassy"
+                aria-label="Generate"
+                aria-describedby="tooltip-generate"
+                data-generate
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903h-3.183a.75.75 0 100 1.5h4.992a.75.75 0 00.75-.75V4.356a.75.75 0 00-1.5 0v3.18l-1.9-1.9A9 9 0 003.306 9.67a.75.75 0 101.45.388zm15.408 3.352a.75.75 0 00-.919.53 7.5 7.5 0 01-12.548 3.364l-1.902-1.903h3.183a.75.75 0 000-1.5H2.984a.75.75 0 00-.75.75v4.992a.75.75 0 001.5 0v-3.18l1.9 1.9a9 9 0 0015.059-4.035.75.75 0 00-.53-.918z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <span id="tooltip-generate" role="tooltip"> Generate </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-benefits" id="benefits">
+        <div class="container">
+          <h2>What are the main benefits of using Dragon Quotes?</h2>
+          <div class="benefits-container">
+            <div class="benefit">
+              <div class="benefit-description">
+                <h3><span class="icon">💡</span> Daily Inspiration</h3>
+                <p>
+                  It provides a regular dose of inspiration and motivation to
+                  start your day on a positive note
+                </p>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit-description">
+                <h3><span class="icon">🌞</span> Mental Boost</h3>
+                <p>
+                  Inspirational quotes can uplift your mood, boost your mental
+                  well-being, and increase positivity
+                </p>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit-description">
+                <h3><span class="icon">🎯</span> Goal Orientation</h3>
+                <p>
+                  Motivational quotes help you stay focused on your goals and
+                  remind you of your aspirations
+                </p>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit-description">
+                <h3><span class="icon">👍</span> Encouragement</h3>
+                <p>
+                  They offer encouragement during challenging times, reminding
+                  you that you can overcome obstacles
+                </p>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit-description">
+                <h3><span class="icon">🌍</span> Perspective Shift</h3>
+                <p>
+                  Dragon quotes provide a fresh perspective and wisdom, helping
+                  you see situations in a new light
+                </p>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit-description">
+                <h3><span class="icon">🤔</span> Self-Reflection</h3>
+                <p>
+                  Thought-provoking quotes encourage self-reflection, promoting
+                  personal growth and self-awareness
+                </p>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit-description">
+                <h3><span class="icon">⚡️</span> Increased Productivity</h3>
+                <p>
+                  Motivational quotes can enhance your productivity by inspiring
+                  you to take action and stay motivated
+                </p>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit-description">
+                <h3><span class="icon">🧠</span> Shared Wisdom</h3>
+                <p>
+                  Quotes often convey wisdom from accomplished individuals,
+                  allowing you to learn from their experiences
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-authors bg-stars" id="authors">
+        <article class="container">
+          <h2>About authors</h2>
+          <div class="column-2">
+            <div class="column-technologies">
+              <div class="technology glassy">
+                <img
+                  loading="lazy"
+                  src="./icons/node.svg"
+                  alt="Node"
+                  class="technology-icon"
+                />
+                <div class="technology-text">
+                  <h3 data-node>Node</h3>
+                  <p>
+                    Library providing backend capabilities and access to system
+                    resources, used to create full-featured desktop applications
+                    using web technologies
+                  </p>
+                </div>
+              </div>
+              <div class="technology glassy">
+                <img
+                  loading="lazy"
+                  src="./icons/chrome.svg"
+                  alt="Chrome"
+                  class="technology-icon"
+                />
+                <div class="technology-text">
+                  <h3 data-chrome>Chrome</h3>
+                  <p>
+                    Underlying open-source browser engine, providing a windowing
+                    system and rendering capabilities
+                  </p>
+                </div>
+              </div>
+              <div class="technology glassy">
+                <img
+                  loading="lazy"
+                  src="./icons/electron.svg"
+                  alt="Quotable"
+                  class="technology-icon"
+                />
+                <div class="technology-text">
+                  <h3>Quotable</h3>
+                  <p>
+                    An open-source GitHub repository that provides an API for accessing random quotations
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="column-text">
+              <p>
+                Hello👋. I'm Kirill Chekmenev, the creative mind behind 🐉Dragon
+                Quotes🐉, a desktop application designed to inspire and motivate
+                individuals. As a passionate developer and designer, I embarked
+                on a remarkable journey to bring this sparking idea to life.
+                Every aspect of Dragon Quotes, from crafting the user experience
+                to coding the complex logic, bears my personal touch.
+              </p>
+              <p>
+                I consciously understand that the chance of actually helping
+                someone is miserably low, yet it's not zero. Hence, my dream of
+                helping people with technology came closer to real life. I hope
+                that 🐉Dragon Quotes🐉 will guide you towards the right
+                development path by slightly uplifting your motivation with some
+                catchy phrases.
+              </p>
+              <p>
+                The list on the side (or above if you are using the phone) is
+                the application's core, while the tools below are the technology
+                used throughout the entire process to support the development.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="section-technologies bg-stars" id="technologies">
+        <div class="container">
+          <h2>Design and prototyping</h2>
+          <div class="technology-container">
+            <div class="technology glassy">
+              <img
+                loading="lazy"
+                src="./icons/framer.svg"
+                alt="Framer"
+                class="technology-icon"
+              />
+              <div class="technology-text">
+                <h3>Framer AI</h3>
+                <p>
+                  Framer AI is an advanced prototyping and design tool that
+                  enables the creation of interactive and animated user
+                  interfaces
+                </p>
+              </div>
+            </div>
+            <div class="technology glassy">
+              <img
+                loading="lazy"
+                src="./icons/figma.svg"
+                alt="figma"
+                class="technology-icon"
+              />
+              <div class="technology-text">
+                <h3>Figma</h3>
+                <p>
+                  Figma is a collaborative design tool that allows users to
+                  create, prototype, and collaborate on digital designs in
+                  real-time
+                </p>
+              </div>
+            </div>
+            <div class="technology glassy">
+              <img
+                loading="lazy"
+                src="./icons/realtimecolors.png"
+                alt="Realtime Colors"
+                class="technology-icon"
+              />
+              <div class="technology-text">
+                <h3>Realtime Colors</h3>
+                <p>
+                  Realtime Colors is a website that provides a dynamic and
+                  interactive color palette generator, allowing users to
+                  explore, create, and customize color schemes in real-time
+                </p>
+              </div>
+            </div>
+            <div class="technology glassy">
+              <img
+                loading="lazy"
+                src="./icons/codepen.svg"
+                alt="CodePen"
+                class="technology-icon"
+              />
+              <div class="technology-text">
+                <h3>CodePen</h3>
+                <p>
+                  CodePen is an online platform that allows developers to write,
+                  share, and collaborate on HTML, CSS, and JavaScript code
+                  snippets in a browser-based editor.
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2>Images and icons</h2>
+          <div class="technology-container">
+            <div class="technology glassy">
+              <img
+                loading="lazy"
+                src="./icons/unsplash.svg"
+                alt="unsplash"
+                class="technology-icon"
+              />
+              <div class="technology-text">
+                <h3>Unsplash</h3>
+                <p>
+                  Unsplash is a popular online platform that provides
+                  high-quality, royalty-free images for free
+                </p>
+              </div>
+            </div>
+            <div class="technology glassy">
+              <img
+                loading="lazy"
+                src="./icons/heroicons.svg"
+                alt="Heroicons"
+                class="technology-icon"
+              />
+              <div class="technology-text">
+                <h3>Heroicons</h3>
+                <p>
+                  Heroicons is a collection of customizable SVG icons that can
+                  be used to enhance the visual design of websites and
+                  applications
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2>Uncategorised tools</h2>
+          <div class="technology-container">
+            <div class="technology glassy">
+              <img
+                loading="lazy"
+                src="./icons/chatgpt.svg"
+                alt="ChatGPT"
+                class="technology-icon"
+              />
+              <div class="technology-text">
+                <h3>ChatGPT</h3>
+                <p>
+                  ChatGPT is an advanced language model developed by OpenAI that
+                  can engage in conversational interactions and generate
+                  human-like responses
+                </p>
+              </div>
+            </div>
+            <div class="technology glassy">
+              <img
+                loading="lazy"
+                src="./icons/joshuaсomeau.webp"
+                alt="Joshua Comeau"
+                class="technology-icon"
+              />
+              <div class="technology-text">
+                <h3>Joshua Comeau</h3>
+                <p>
+                  Joshua Comeau's website is a valuable resource for web
+                  developers, offering insightful content and tutorials on CSS,
+                  React, and JavaScript
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <a href="#about">About us</a>
+            <a href="#quote">Get a quote</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#authors">Authors</a>
+            <a href="#technology">Technologies</a>
+          </div>
+          <span>© 2023 Kirill Chekmenev. All Rights Reserved.</span>
+        </div>
+      </footer>
+    </main>
+    <script defer src="./js/out.js"></script>
+  </body>
+</html>

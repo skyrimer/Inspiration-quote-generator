@@ -1,0 +1,22 @@
+{
+  "name": "quote-generator-using-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Kirill Chekmenev",
+  "license": "ISC",
+  "dependencies": {
+    "@floating-ui/dom": "^1.4.5",
+    "@mojs/core": "^1.5.1",
+    "@studio-freight/lenis": "^1.0.16",
+    "animejs": "^3.2.1",
+    "esbuild": "^0.18.11",
+    "html-to-image": "^1.11.11",
+    "mo-js": "^0.288.2",
+    "vanilla-tilt": "^1.8.0"
+  }
+}

@@ -1,0 +1,201 @@
+$nav-width-desktop: 30em;
+$nav-item-nb: 5;
+.burger-wrapper {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    &::before {
+        content: "";
+        position: fixed;
+        z-index: 1;
+        inset: 0;
+        background-color: var(--clr-background);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity calc(var(--tr-time) * 2) var(--tr-function);
+    }
+    .burger {
+        position: fixed;
+        top: 2em;
+        left: 2em;
+        z-index: 3;
+        width: 2em;
+        height: 2em;
+        margin: 0;
+        padding: 0;
+        transition: opacity calc(var(--tr-time) * 2) var(--tr-function);
+        &::before,
+        .bar,
+        &::after {
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 12%;
+            background-color: var(--clr-secondary);
+            content: "";
+            transition: all calc(var(--tr-time) * 2) var(--tr-function);
+        }
+        .bar {
+            top: 44%;
+        }
+        &::before {
+            top: 0;
+            transform-origin: top left;
+        }
+        &::after {
+            bottom: 0;
+            transform-origin: bottom left;
+        }
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translate3d(0, 0, 0); /* material acceleration */
+    transform: translateX(-100%);
+    will-change: transform;
+    transition: transform calc(var(--tr-time) * 2) var(--tr-function);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        width: $nav-width-desktop;
+        background-color: var(--clr-background-secondary);
+        transform: skewX(15deg) translateX(-100%);
+        transform-origin: bottom left;
+        will-change: transform;
+        transition: transform calc(var(--tr-time) * 2) var(--tr-function);
+    }
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 1em 0;
+        padding: 0.2em 2em;
+        font-size: 1.5em;
+        color: var(--clr-primary);
+        text-decoration: none;
+        font-weight: 500;
+        opacity: 0.5;
+        transform: translateX(-100%);
+        transition:
+            opacity var(--tr-time),
+            color var(--tr-time),
+            transform calc(var(--tr-time) * 2);
+        transition-timing-function: var(--tr-function);
+        svg {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+        }
+        @for $i from 1 through $nav-item-nb {
+            &:nth-child(#{$i}) {
+                transition-delay: 0s, 0s, calc(var(--tr-time) / 3 + (var(--tr-time) / 6 * $i));
+            }
+        }
+        &:hover,
+        &:focus {
+            opacity: 1;
+            color: var(--clr-secondary);
+            svg {
+                animation: swing var(--tr-function) var(--tr-time) 1 alternate;
+            }
+        }
+    }
+}
+
+main {
+    @media screen and (min-width: 50rem) {
+        transform-origin: left center;
+        will-change: transform, filter;
+        transition:
+            transform calc(var(--tr-time) * 2) var(--tr-function),
+            filter calc(var(--tr-time) * 2) var(--tr-function);
+    }
+}
+
+body.checked {
+    .burger-wrapper {
+        &::before {
+            opacity: 0.8;
+            pointer-events: auto;
+        }
+        .burger {
+            &::before,
+            .bar,
+            &::after {
+                background-color: var(--clr-tertiary);
+            }
+            &::before,
+            &::after {
+                width: 141.42%; // Pythagore!
+            }
+            &::before {
+                transform: rotate(45deg) translateY(-50%);
+            }
+            &::after {
+                transform: rotate(-45deg) translateY(50%);
+            }
+            .bar {
+                transform: scale(0.1);
+            }
+        }
+    }
+    nav {
+        transform: translateX(0);
+        &::before {
+            transform: skewX(15deg) translateX(0);
+        }
+        a {
+            transform: translateX(0);
+        }
+    }
+    @media screen and (min-width: 50rem) {
+        main {
+            transform: translateX(3em);
+            filter: blur(4px);
+        }
+    }
+}
+
+@keyframes swing {
+    0%,
+    30%,
+    50%,
+    70%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(10deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
+}
