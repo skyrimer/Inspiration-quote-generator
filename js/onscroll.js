@@ -3,7 +3,7 @@ import { qsa } from "./utils";
 
 const duration = 1500;
 
-const tl = anime.timeline({
+export const tl = anime.timeline({
   easing: "easeInOutCubic",
   duration: duration,
 });
@@ -29,7 +29,7 @@ tl.add({
     "-=500"
   );
 
-const slideInElements = document.querySelectorAll(".benefit, .technology");
+const slideInElements = qsa(".benefit, .technology");
 
 const observer = new IntersectionObserver(
   (entries, observer) => {

@@ -10,7 +10,6 @@
   "author": "Kirill Chekmenev",
   "license": "ISC",
   "dependencies": {
-    "@floating-ui/dom": "^1.4.5",
     "@mojs/core": "^1.5.1",
     "@studio-freight/lenis": "^1.0.16",
     "animejs": "^3.2.1",

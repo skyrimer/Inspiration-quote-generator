@@ -2,7 +2,7 @@ import Lenis from "@studio-freight/lenis";
 import VanillaTilt from "vanilla-tilt";
 import { qs, qsa } from "./utils";
 import { currentQuoteInfo } from "./generator";
-import { splashTimeLine } from "./onscroll";
+import { tl } from "./onscroll";
 const lenis = new Lenis({
   smoothWheel: true,
   lerp: 0.09,

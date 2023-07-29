@@ -1,11 +1,9 @@
-import { qs, qsa } from "./utils";
+import { qs } from "./utils";
 import { toBlob, toPng } from "html-to-image";
 import { mojs } from "@mojs/core";
-import { computePosition, flip, offset, shift } from "@floating-ui/dom";
 // Utility functions
 export let currentQuoteInfo = {};
 export let likeCurrentQuote = false;
-localStorage.clear();
 
 const isLiked = (quote = currentQuoteInfo) => {
   return !!localStorage.getItem(quote._id);
@@ -189,21 +187,3 @@ generateButton.addEventListener("click", async () => {
   generateButtonRotationAngle += 360;
   generateQuote();
 });
-
-// Tooltips
-
-// qsa(".btn-wrapper > .tooltip-wrapper").forEach((tooltipWrapper) => {
-//   computePosition(
-//     tooltipWrapper.firstElementChild,
-//     tooltipWrapper.lastElementChild,
-//     {
-//       placement: "bottom",
-//       middleware: [offset(10), flip(), shift()],
-//     }
-//   ).then(({ x, y }) => {
-//     Object.assign(tooltipWrapper.lastElementChild.style, {
-//       left: `${x}px`,
-//       top: `${y}px`,
-//     });
-//   });
-// });
