@@ -368,6 +368,7 @@ cite {
     width: min(calc(55ch + 4rem), 95%);
     padding: min(4rem, 5vh) min(4rem, 5vw);
     position: relative;
+    opacity: 0;
     &::before {
         content: "Generated using Dragon Quotes";
         position: absolute;

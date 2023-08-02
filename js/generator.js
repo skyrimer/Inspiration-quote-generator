@@ -6,16 +6,18 @@ export let currentQuoteInfo = {};
 export let likeCurrentQuote = false;
 
 const isLiked = (quote = currentQuoteInfo) => {
-  return !!localStorage.getItem(quote._id);
+  return !!localStorage.getItem(quote.q);
 };
 
 const getRandomQuote = async () => {
+  numberOfQuoteFiles = 14440;
+  index = (numberOfQuoteFiles.length * Math.random()) | 0
   return fetch(
-    "https://api.quotable.io/quotes/random?minLength=60&tags=Wisdom|Business|Character|Freedom|Inspirational|Knowledge|Life"
+    `../QuoteData/quote_${index}.json`
   )
     .then((response) => response.json())
     .then((responseJson) => {
-      return responseJson[0];
+      return responseJson;
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -27,16 +29,16 @@ const generateQuote = async () => {
   setTimeout(async () => {
     currentQuoteInfo = await getRandomQuote();
     likeCurrentQuote = isLiked(currentQuoteInfo);
-    quote.textContent = currentQuoteInfo.content;
-    author.textContent = currentQuoteInfo.author;
+    quote.textContent = currentQuoteInfo.q;
+    author.textContent = currentQuoteInfo.a;
     card.classList.remove("hidden");
     iconWrapper.classList.toggle("liked", likeCurrentQuote);
   }, 300);
 };
-const setToClipboard = async (blob) => {
-  const data = [new ClipboardItem({ [blob.type]: blob })];
-  await navigator.clipboard.write(data);
-};
+// const setToClipboard = async (blob) => {
+//   const data = [new ClipboardItem({ [blob.type]: blob })];
+//   await navigator.clipboard.write(data);
+// };
 const filter = (node) => {
   return !node.classList?.contains("btn-wrapper");
 };
@@ -88,12 +90,12 @@ const accentColor = getComputedStyle(document.documentElement).getPropertyValue(
 );
 iconWrapper.addEventListener("click", () => {
   if (likeCurrentQuote) {
-    localStorage.removeItem(currentQuoteInfo._id);
+    localStorage.removeItem(currentQuoteInfo.q);
     likeCurrentQuote = false;
     iconWrapper.classList.remove("liked");
     return;
   }
-  localStorage.setItem(currentQuoteInfo._id, JSON.stringify(currentQuoteInfo));
+  localStorage.setItem(currentQuoteInfo.q, currentQuoteInfo.q);
   likeCurrentQuote = true;
   iconWrapper.classList.add("liked");
   const RADIUS = iconHeight;
@@ -132,20 +134,6 @@ iconWrapper.addEventListener("click", () => {
   })
     .generate()
     .play();
-  Notification.requestPermission().then((permission) => {
-    if (permission == "granted") {
-      toBlob(qs("section#quote")).then(async (blob) => {
-        await setToClipboard(blob);
-      });
-      new Notification("Dragon Quotes copied the quote", {
-        body: `Thanks a lot for using our service! The quote that you have copied is "${currentQuoteInfo.content}" by ${currentQuoteInfo.author}`,
-        icon: "./icons/logo.svg",
-        silent: true,
-        lang: "en",
-        tag: "Dragon Quotes quote copied",
-      });
-    }
-  });
 });
 
 // Share

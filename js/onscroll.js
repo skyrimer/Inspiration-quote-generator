@@ -29,7 +29,7 @@ tl.add({
     "-=500"
   );
 
-const slideInElements = qsa(".benefit, .technology");
+const slideInElements = qsa(".benefit, .technology, .quote-wrapper");
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
